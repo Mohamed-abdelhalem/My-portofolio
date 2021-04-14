@@ -1,0 +1,180 @@
+body
+{
+margin: 0;
+padding: 0;
+font-family: cursive;
+}
+
+.nav2
+{
+    display: flex;
+    height: 100px;
+    width: 100%;
+    background: black;
+    border-bottom: white solid 0.5px;
+}
+
+.logo
+{
+    color: GreenYellow;
+    font-size: 30px;
+    font-weight: 900;
+    margin: 30px 0px 0 50px;
+    display: inline-block;
+    
+}
+
+.logo:hover
+{
+    transform: scale(1.1);
+    transition: all 0.5s;
+}
+
+
+.menu-btn i
+{
+ font-size: 50px;
+ float: right;
+ margin: 20px 0px  0 0;
+ color: black;
+ display: none;
+ cursor: pointer;
+}
+
+input[type="checkbox"]
+{
+    display: none;
+}
+
+.ull
+{
+    
+    list-style: none;
+}
+
+
+ .ull li
+{
+    display: inline-block;
+    margin: 15px 30px 15px 40px ;
+}
+
+
+.ull li a
+ {
+   color: white;
+   text-decoration: none;
+   font-size: 30px;
+   font-weight: 900;
+   
+}
+
+ .ull li a:hover
+{
+    color: GreenYellow;
+    transform: scale(1.1);
+    transition: all 0.5s;
+    padding: 30px 15px;
+}
+
+ .ull li a.active
+{
+    font-weight: 900;
+    font-style: italic;
+    color: greenyellow;
+}
+
+.titlecommon
+{
+color: greenyellow;
+font-size: 50px;
+font-weight: 900;
+text-align: center;
+margin-top: 50px;
+}
+
+@media
+(max-width: 500px)
+{
+    .nav
+    {
+        padding: 0 0px 0 0px;
+        border-bottom: solid 0.5px white;
+       
+    }
+    
+     .logo
+     {
+        font-size: 20px;
+        margin-right:  80px;
+     }
+     .menu-btn i
+    {
+        display: block;
+        margin: 25px 5px;
+        color: greenyellow;
+        font-size: 30px;
+    }
+    #click:checked~.menu-btn i:before
+    {
+        content: "\f00d";
+	
+    }
+    
+    
+     .ull
+    {
+        position: fixed; 
+        top: 80px;
+        left: -200%; 
+        background: black ;
+        height: 200vh;
+        width: 100%;
+        text-align: center;
+        display: block;
+        transition: all 0.3s ease;
+    }
+    #click:checked~.ull
+    {
+        left: 0;
+	 
+    }
+    .ull li
+    {
+        width: 100%;
+        margin: 45px 0 0;
+    }
+     .ull li a
+     {
+        width: 100%;
+        margin-left: 100%;
+        display: block;
+        font-size: 32px;
+        transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+     }
+    #click:checked~.ull li a
+    {
+        margin-left: 0px;
+    }
+     .ull li a.active 
+    {
+        color: greenyellow;
+        font-size: 50px;
+        font-weight: 600;
+    }
+    
+    
+    .ull li a:hover
+    {
+        background: none;
+        color: greenyellow;
+        font-size: 40px;
+        transition: 0.3s;
+        transition-timing-function: ease-in-out;
+    }
+    
+    .content
+    {
+        min-height: calc(100vh - 220px);
+    } 
+}
